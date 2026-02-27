@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-primary: #065f46;
+  --color-emerald-secondary: #10b981;
+  --color-emerald-light: #ecfdf5;
+  
+  --font-arabic: "Scheherazade New", serif;
+  --font-pashto: "Vazirmatn", sans-serif;
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--font-pashto);
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    font-family: var(--font-pashto);
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+
+@font-face {
+  font-family: 'WazirMatn';
+  src: url('/WazirMatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WazirMatn';
+  src: url('/WazirMatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ټول اپ ته فونټ ورکړه */
+html, body, #root {
+  font-family: 'WazirMatn', sans-serif;
+}
